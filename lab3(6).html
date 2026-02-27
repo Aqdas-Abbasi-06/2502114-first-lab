@@ -1,0 +1,15 @@
+<html>
+<body>
+<script>
+function checkStatus(callback) {
+    setTimeout(() => callback("Status OK"), 2000);
+}
+
+function checkStatusPromise() {
+    return new Promise(resolve => checkStatus(resolve));
+}
+
+checkStatusPromise().then(result => console.log(result));
+</script>
+</body>
+</html>

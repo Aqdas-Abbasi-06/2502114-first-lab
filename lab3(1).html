@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+student task 1
+        </title>
+    </head>
+    
+<body>
+
+<script>
+
+function sayHello(name, callback) {
+    setTimeout(function() {
+        callback(`Hello, ${name}!`);
+    }, 3000);
+}
+
+function displayMessage(message) {
+    console.log(message);
+}
+
+sayHello("Ayesha", displayMessage);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+<input type="text" id="message">
+<button onclick="sendMessage()">Send</button>
+<script>
+const socket = new WebSocket("wss://echo.websocket.org");
+
+function sendMessage() {
+    const msg = document.getElementById("message").value;
+    socket.send(msg);
+}
+</script>
+</body>
+</html>

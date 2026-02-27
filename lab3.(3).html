@@ -1,0 +1,36 @@
+<html>
+<body>
+
+<script>
+
+const getProductIDs = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([123, 456, 789]);
+        }, 1000);
+    });
+};
+
+const getProductDetails = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(`Details of product ${id}`);
+        }, 1000);
+    });
+};
+
+getProductIDs()
+    .then((ids) => {
+        return getProductDetails(ids[0]);
+    })
+    .then((details) => {
+        console.log(details);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+</script>
+
+</body>
+</html>

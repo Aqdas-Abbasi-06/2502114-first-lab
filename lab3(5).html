@@ -1,0 +1,11 @@
+<html>
+<body>
+<script>
+const promiseone = new Promise(resolve => setTimeout(() => resolve("Resolved in 1s"), 1000));
+const promisetwo = new Promise(resolve => setTimeout(() => resolve("Resolved in 3s"), 3000));
+
+Promise.race([promiseone, promisetwo])
+    .then(result => console.log(result)); 
+</script>
+</body>
+</html>

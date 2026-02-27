@@ -1,0 +1,20 @@
+
+<html>
+<body>
+
+<script>
+const buffer = new ArrayBuffer(16);
+const view = new Uint8Array(buffer);
+
+for (let i = 0; i < view.length; i++) {
+    view[i] = i * 10;
+}
+
+console.log(view);
+
+const decoder = new TextDecoder();
+console.log(decoder.decode(buffer));
+</script>
+
+</body>
+</html>
